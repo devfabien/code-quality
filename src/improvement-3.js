@@ -1,3 +1,3 @@
-export default function findLargestNumber(numbers) {
+export default function getLargestNumber(numbers) {
  return Math.max(...numbers)
 }
