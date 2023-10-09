@@ -7,9 +7,10 @@ export const forbiddenPasswords = ["amG84h6yeQ", "mc9Q20pdjH", "jnT6Q2f8U5"];
  * @returns {boolean}
  */
 export default function isValidPassword(password = "") {
-  // The following line ensures, that password is always a string, like the number 128 -> string "128"
   if (typeof password !== "string") password = String(password);
-
+ const REG_EXP=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{10}$/
+ if(REG_EXP.test(password) && new Set([...password]).size>3) return true
+ return false
   // * * * YOUR CODE GOES IN HERE ... * * *
   /*
    * if (password is not exactly 10 digits or characters...) {
