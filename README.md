@@ -76,3 +76,4 @@ You can submit your solution at any time before the deadline by just commiting t
 - You're allowed so search on Google (but try to understand the solution before copy and paste it and choose the right source). Please do not use ChatGPT.
 - It is not necessary to have complete solutions to all of the exercises to pass the assessment. Just pick what you feel confident in doing, and don't stress yourself too much if you run short on time.
 - Have fun 👍
+# code-quality
