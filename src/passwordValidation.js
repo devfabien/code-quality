@@ -12,24 +12,16 @@ export default function isValidPassword(password) {
 
   if (forbiddenPasswords.includes(password)) return false;
 
-  const consecutiveNumbers = [
-    "012",
-    "123",
-    "234",
-    "345",
-    "456",
-    "567",
-    "678",
-    "789",
-    "987",
-    "876",
-    "765",
-    "654",
-    "543",
-    "432",
-    "321",
-    "210",
-  ].some((numbers) => password.includes(numbers));
+  const passowrdNumbers = password
+    .split("")
+    .filter((char) => Number(char))
+    .map((value) => +value);
+
+  const consecutiveNumbers = passowrdNumbers.some(
+    (number, index, array) =>
+      number + 1 === array[index + 1] || number - 1 === array[index + 1]
+  );
+
   if (consecutiveNumbers) return false;
   return true;
 }
